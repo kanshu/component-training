@@ -1,0 +1,8 @@
+uuid: cbd70eb3-842a-4c77-8118-f5efc0fa332c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Full HTML (no editor)'
+format: full_html_admin
+weight: 0
+filters: {  }
