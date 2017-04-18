@@ -1,0 +1,51 @@
+// @file
+// Footer Nav
+
+$bp-footer-menu: 700px;
+
+.nav--menu-footer {
+  margin-bottom: 0;
+  padding: 1em 0;
+
+  @include breakpoint($bp-footer-menu) {
+    align-items: center;
+    display: flex;
+    height: rem(75px);
+  }
+
+  .nav__item {
+    flex: 1 1 auto;
+    margin-bottom: .5em;
+    position: relative;
+    text-align: center;
+
+    @include breakpoint($bp-footer-menu) {
+      margin-bottom: 0;
+
+      @include pseudo-block(after, inline-block) {
+        background-color: $white;
+        height: 18px;
+        position: absolute;
+        right: 0;
+        top: 4px;
+        width: 1px;
+      }
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .nav__link {
+    border-bottom: 1px solid transparent;
+    color: $white;
+    font-size: em($font-size-sm);
+    text-decoration: none;
+    &:hover, &:focus {
+      border-color: #fff;
+    }
+  }
+}

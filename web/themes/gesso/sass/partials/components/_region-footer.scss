@@ -1,0 +1,35 @@
+// @file
+// Footer region-footer
+
+$bp-footer-menu: 700px;
+
+.region-footer {
+
+  .region-footer__top {
+    height: rem(200px);
+    position: relative;
+
+    &::before {
+      @include svg-background('hero-curved-overlay');
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+      bottom: 0;
+      content: '';
+      left: 0;
+      opacity: .25;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: scaleX(-1);
+    }
+  }
+
+  .region-footer__bottom {
+    background-color: $marine;
+
+    @include breakpoint($bp-footer-menu) {
+      height: rem(75px);
+    }
+  }
+}

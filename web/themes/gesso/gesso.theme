@@ -1,0 +1,35 @@
+<?php
+/**
+ * @file
+ * Functions to support theming.
+ */
+
+require_once dirname(__FILE__) . '/includes/form.inc';
+require_once dirname(__FILE__) . '/includes/html.inc';
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function gesso_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+
+  // Test for existence of Template field
+  if (isset($variables['elements']['field_landing_type'])) {
+
+    // Grab Node and Field
+    $node = \Drupal::routeMatch()->getParameter('node');
+    $field = $node->get('field_landing_type');
+
+    // If field not empty then grab value and use as theme suggestions
+    if (!$field->isEmpty()) {
+      $term = $field
+        ->first()
+        ->get('entity')
+        ->getTarget()
+        ->getValue()
+        ->getName();
+      $suggestions[] = 'node__' . 'landing__' . strtolower($term);
+    }
+
+  }
+
+}

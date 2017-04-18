@@ -1,0 +1,38 @@
+// @file
+// Site Name
+
+.site-name {
+  @include image-replace(270px, 90px);
+  @include svg-background('logo-pwc-short');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  margin: rem(5px) auto 0;
+
+  .region-header & {
+    @include breakpoint(1000px) {
+      @include image-replace(460px, 90px);
+      @include svg-background('logo-pwc-long');
+      background-position: -10px center;
+      margin: rem(5px) 0 0;
+    }
+  }
+
+  .region-footer & {
+    @include svg-background('logo-pwc-footer');
+    left: 1em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .mobile-menu & {
+    height: 45px;
+    margin: 0 auto;
+    position: relative;
+    top: 5px;
+    width: 135px;
+  }
+
+}

@@ -1,0 +1,21 @@
+<div class="layout-container">
+  <header class="region-header" role="banner">
+    <div class="l-constrain">
+      {{ page.header }}
+    </div>
+  </header>
+
+  {{ page.breadcrumb }}
+  {{ page.highlighted }}
+  {{ page.help }}
+
+  <main id="main" class="main" role="main" tabindex="-1">
+    {{ page.content }}
+  </main>
+
+  <footer class="region-footer" role="contentinfo">
+    {{ page.footer_top }}
+    {{ page.footer_bottom }}
+  </footer>
+
+</div>

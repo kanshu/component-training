@@ -1,0 +1,20 @@
+bodyClass: ""
+htmlClass: ""
+url: "#"
+pageTitle: "Page Title"
+siteName: "Site Name"
+font:
+  headings: "'Helvetica Neue', Helvetica, Arial, sans-serif;"
+  monospace: "Consolas, 'Lucida Console', 'Liberation Mono', 'Courier New', monospace, sans-serif;"
+  primary: "'Helvetica Neue', Helvetica, Arial, sans-serif;"
+img:
+  thumbnail:
+    src: "http://fpoimg.com/140x105?text=Thumbnail 4:3"
+    alt: "Thumbnail 4:3"
+    height: "105"
+    width: "140"
+  landscape:
+    src: "http://fpoimg.com/800x450?text=Landscape 16:9"
+    alt: "Landscape 16:9"
+    height: "450"
+    width: "800"

@@ -1,0 +1,64 @@
+// @file
+// Styles for the main menu.
+
+.nav--main {
+  @extend %nav--inline;
+  align-items: center;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 10px 0;
+
+  .nav__link {
+    border-bottom: 3px solid transparent;
+    color: $white;
+    display: inline-block;
+    font-family: $header-font-family;
+    font-size: em(16px);
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover, &:focus {
+      border-color: #fff;
+    }
+
+    @include breakpoint(700px) {
+      font-size: em(24px);
+    }
+
+    &.nav__link--button {
+      @include button(
+        $orange,
+        $white,
+        darken($orange,10%),
+        $white,
+        $orange,
+        $white,
+        $button-color-bg-disabled,
+        $button-color-text-disabled,
+        0,
+        14px
+      );
+      font-weight: 600;
+      margin-bottom: 0;
+
+      @include breakpoint(700px) {
+        font-size: rem(20px);
+      }
+    }
+  }
+
+  .nav__item {
+    flex: 1 1 auto;
+    text-align: center;
+
+    &:last-child {
+      flex: .5 1 auto;
+    }
+  }
+
+  @media print {
+    display: none;
+  }
+}

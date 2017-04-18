@@ -1,0 +1,54 @@
+// @file
+// Landing Page Sections
+
+.section-landing {
+  background-color: $offwhite;
+  padding-bottom: rem(90px);
+  padding-top: rem(64px);
+}
+
+.section-landing--subsections {
+  background-color: $white;
+  padding-top: 0;
+}
+
+.section-landing__inner {
+  position: relative;
+}
+
+.section-landing__section  {
+  background-color: transparent;
+  overflow: visible;
+  position: relative;
+
+  @include breakpoint(max-width 730px) {
+    padding-bottom: 0;
+    padding-top: rem(32px);
+  }
+}
+
+.section-landing__title {
+  color: $light-gray;
+  font-size: em(40px);
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+
+  @include breakpoint(780px) {
+    font-size: em(80px);
+    left: -(rem(22px));
+    position: absolute;
+    top: -(rem(76px));
+  }
+
+  .section-landing__section & {
+    font-size: em(32px);
+    left: 0;
+    top: -8px;
+
+    @include breakpoint(780px) {
+      font-size: em(60px);
+      position: relative;
+    }
+  }
+}

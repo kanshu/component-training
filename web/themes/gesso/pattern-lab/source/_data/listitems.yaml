@@ -1,0 +1,104 @@
+1:
+  url: "http://http://www.commercekitchen.com/whedon-ipsum/"
+  title: "You can't take the sky from me"
+  teaser: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  teaserDate: "January 1, 2016"
+  summary: "<p> We're gonna explode? I don't wanna explode. Boy, when they were handing out school spirit, you didn't even stand in line, did you? We will rule over all this land, and we will call it...This Land. It's about power and it's about women and you just hate those two words in the same sentence, don't you? Just once I would like to run into a cult of bunny worshippers. Put your words in word places please. </p>"
+  img:
+    thumbnail:
+      src: "https://unsplash.it/140/105?image=121"
+      alt: "Thumbnail 4:3"
+    landscape:
+      src: "https://unsplash.it/800/450?image=121"
+      alt: "Landscape 16:9"
+2:
+  url: "http://veggieipsum.com"
+  title: "Veggies sunt bona vobis, proinde vos postulo"
+  teaser: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  teaserDate: "February 1, 2016"
+  summary: "<p>Mung bean squash sorrel taro coriander collard greens gumbo bitterleaf tomato. Taro water chestnut celtuce turnip yarrow celery endive scallion black-eyed pea onion. Aubergine dulse turnip greens mustard salsify garlic soybean parsley bitterleaf desert raisin courgette.</p>"
+  img:
+    thumbnail:
+      src: "https://unsplash.it/140/105?image=125"
+      alt: "Thumbnail 4:3"
+    landscape:
+      src: "https://unsplash.it/800/450?image=125"
+      alt: "Landscape 16:9"
+3:
+  url: "http://baconipsum.com/"
+  title: "Bacon ipsum dolor sit amet turducken strip steak beef ribs shank"
+  teaser: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  teaserDate: "March 1, 2016"
+  summary: "<p>Boudin sausage jerky pastrami ground round salami biltong. Sausage fatback strip steak doner pork loin, pork belly drumstick ham short loin hamburger shankle. Short ribs sirloin rump tri-tip beef biltong. Meatball pig salami, jowl pork loin fatback short loin drumstick andouille.</p>"
+  img:
+    thumbnail:
+      src: "https://unsplash.it/140/105?image=130"
+      alt: "Thumbnail 4:3"
+    landscape:
+      src: "https://unsplash.it/800/450?image=130"
+      alt: "Landscape 16:9"
+4:
+  url: "http://hipsteripsum.me/"
+  title: "Whatever swag accusamus occupy, gentrify butcher tote bag"
+  teaser: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  teaserDate: "April 1, 2016"
+  summary: "<p>Fanny pack ullamco et veniam semiotics. Shoreditch PBR reprehenderit cliche, magna Tonx aesthetic. Narwhal photo booth DIY aute post-ironic anim. Vice cliche brunch est before they sold out fap, street art Odd Future fashion axe messenger bag nihil Tonx tattooed. Nihil hashtag incididunt, do eu art party Banksy jean shorts four loko typewriter.</p>"
+  img:
+    thumbnail:
+      src: "https://unsplash.it/140/105?image=140"
+      alt: "Thumbnail 4:3"
+    landscape:
+      src: "https://unsplash.it/800/450?image=140"
+      alt: "Landscape 16:9"
+5:
+  url: "http://www.niemanlab.org/journo-ipsum/"
+  title: "Marshall McLuhan Colbert bump backpack journalist vast wasteland Romenesko CPM"
+  teaser: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  teaserDate: "May 1, 2016"
+  summary: "<p>Like button audience atomization overcome Colbert bump Free Darko inverted pyramid we will make them pay, digital circulation strategy Like button totally blowing up on Twitter church of the savvy. Pictures of Goats section open source discuss Frontline analog thinking filters paidContent.</p>"
+  img:
+    thumbnail:
+      src: "https://unsplash.it/140/105?image=200"
+      alt: "Thumbnail 4:3"
+    landscape:
+      src: "https://unsplash.it/800/450?image=200"
+      alt: "Landscape 16:9"
+6:
+  url: "http://www.malevole.com/mv/misc/text/"
+  title: "Thunder, thunder, thundercats, Ho!"
+  teaser: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  teaserDate: "June 1, 2016"
+  summary: "<p>Beats all you've ever saw, been in trouble with the law since the day they was born. Straight'nin' the curve, flat'nin' the hills. Someday the mountain might get 'em, but the law never will. Makin' their way, the only way they know how, that's just a little bit more than the law will allow. Just good ol' boys, wouldn't change if they could, fightin' the system like a true modern day Robin Hood.</p>"
+  img:
+    thumbnail:
+      src: "https://unsplash.it/140/105?image=305"
+      alt: "Thumbnail 4:3"
+    landscape:
+      src: "https://unsplash.it/800/450?image=305"
+      alt: "Landscape 16:9"
+7:
+  url: "Yeah, I like animals better than people sometimes"
+  title: "You can't take the sky from me"
+  teaser: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  teaserDate: "July 1, 2016"
+  summary: "<p>Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people. Like pit bulls. The dog of dogs. Pit bull can be the right man's best friend... or the wrong man's worst enemy. You going to give me a dog for a pet, give me a pit bull.</p>"
+  img:
+    thumbnail:
+      src: "https://unsplash.it/140/105?image=425"
+      alt: "Thumbnail 4:3"
+    landscape:
+      src: "https://unsplash.it/800/450?image=425"
+      alt: "Landscape 16:9"
+8:
+  url: "http://web20ipsum.com"
+  title: "Webtwo ipsum dolor sit amet, eskobo chumby doostang bebo"
+  teaser: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  teaserDate: "August 1, 2016"
+  summary: "<p>Wufoo diigo grockit sifteo divvyshot, unigo zooomr revver. Edmodo appjet joyent skype bubbli jajah zoodles joukuu xobni hojoki edmodo appjet, mozy mzinga akismet yuntaa joost yuntaa geni tivo insala yoono chumby, grockit sococo loopt zanga etsy cloudera koofers empressr jiglu blippy. Omgpop lanyrd joukuu sococo zimbra airbnb movity jibjab, foodzie.</p>"
+  img:
+    thumbnail:
+      src: "https://unsplash.it/140/105?image=209"
+      alt: "Thumbnail 4:3"
+    landscape:
+      src: "https://unsplash.it/800/450?image=209"
+      alt: "Landscape 16:9"

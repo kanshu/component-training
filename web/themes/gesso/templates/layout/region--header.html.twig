@@ -1,0 +1,7 @@
+{% set classes = [ 'region-header__grid' ] %}
+
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    {{ content }}
+  </div>
+{% endif %}

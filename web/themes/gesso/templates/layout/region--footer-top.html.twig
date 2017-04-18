@@ -1,0 +1,9 @@
+{% set classes = [ 'region-footer__top' ] %}
+
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    <div class="l-constrain">
+      {{ content }}
+    </div>
+  </div>
+{% endif %}
