@@ -24,82 +24,85 @@ With `drupal server` you should now have a PHP webserver running on 127.0.0.1:80
 During this lesson we will be reviewing a design, identifying components and begin building our first components using Pattern Lab.  We will learn how to create simple components, combine components and then migrate components to Drupal 8 using Twig.  Various modules will come in handy such as Paragraphs, Twig Tweak and Twig field value.
 
 ## Reviewing the Homepage Design
-Add Codepen url
+[Homepage](https://codepen.io/cchumley/full/PmPPMb/)
 
 ## Creating our first component (Hero)
-- Step One Review Hero (look at design)
+- Step One Review [Hero](https://codepen.io/cchumley/full/eWppEy)
 - Create markup
-- Review final Completed example [Hero](http://codepen.io/sbrack8t/pen/e66edb85ddee12e2a220a660f7f6aa14)
-- Create component in PL (Convert markup to Twig)
+- Review final Completed example [Hero](https://codepen.io/cchumley/pen/eWppEy)
+- Create component in PL [Convert markup to Twig](https://gist.github.com/chazchumley/3ddcf9d7374a29e179e5a50e39a5aeb4)
+- Create dependent button component in PL [Convert markup to Twig](https://gist.github.com/chazchumley/146d18bee71ef10395dd6351ae3347d6)
 
-## Creating our second component (Card)
-- Step One Review Card (look at design)
+## Creating our second component (Media Card)
+- Step One Review [Media Card](https://codepen.io/cchumley/full/aWvvKR/)
 - Create markup
-- Review final Completed example [Card](http://codepen.io/sbrack8t/pen/e66edb85ddee12e2a220a660f7f6aa14)
-- Create component in PL (Convert markup to Twig)
+- Review final Completed example [Media Card](https://codepen.io/cchumley/pen/aWvvKR)
+- Create component in PL [Convert markup to Twig](https://gist.github.com/chazchumley/92c201754b1c95f0f06d97b2b96f5d1e)
 
 ## Creating our second component (Teaser)
-- Step One Review Teaser (look at design)
+- Step One Review [Teaser](https://codepen.io/cchumley/full/EmVVMG/)
 - Create markup
-- Review final Completed example [Teaser](http://codepen.io/sbrack8t/pen/e66edb85ddee12e2a220a660f7f6aa14)
-- Create component in PL (Convert markup to Twig)
+- Review final Completed example [Teaser](https://codepen.io/cchumley/pen/EmVVMG)
+- Create component in PL [Convert markup to Twig](https://gist.github.com/chazchumley/b5772a59d980fcca8e7e08dae3ad353c)
 
-## Creating our second component (Teaser Image)
-- Step One Review Teaser Image (look at design)
+## Creating our second component (Media Teaser)
+- Step One Review [Media Teaser](https://codepen.io/cchumley/full/Gmppwp/)
 - Create markup
-- Review final Completed example [Teaser Image](http://codepen.io/sbrack8t/pen/e66edb85ddee12e2a220a660f7f6aa14)
-- Create component in PL (Convert markup to Twig)
+- Review final Completed example [Media Teaser](https://codepen.io/cchumley/pen/Gmppwp)
+- Create component in PL [Convert markup to Twig](https://gist.github.com/chazchumley/28114f7f9f26c22cf282a42305bb84c9)
 
 ## Creating Page Template (Homepage)
-- Step One Review Homepage (look at design)
-- Review homepage.twig
-- Introduce concept of includes / includes with
-- Introduce concept of loops and using listitems.yaml
-- Introduce contept of using listitems.yaml to have different data for each card
-- Review completed homepage in PL
+- Step One Review [Homepage](https://codepen.io/cchumley/full/PmPPMb/)
+- Review [homepage.twig](https://gist.github.com/chazchumley/d7abbaf8b80d2c4f35879b1084fa44d8)
+- Working with `@includes` and `@includes with` variables
+- Repeating content with loops and `listitems.yaml`
+- Review completed [homepage.twig](https://gist.github.com/chazchumley/b5162cd77b831f1edb168da9f476f211) in PL
 
-# Converting PL Components into Drupal
-- Indentify how the Hero would translate to Drupal using Paragraphs
-- Working with Paragraphs to Create Hero and Button paragrpah types
--- Explain reason to nest paragraph types for reuse and flexibility
+# Converting Hero Components into Drupal
+- Identify how the Hero component would translate to Drupal using Paragraphs
+- Working with Paragraphs to Create Hero and Button paragraph types
+-- Nesting paragraph types for reuse and flexibility
 - Add Hero paragraph to Homepage in Drupal
 - Review output
-- Create html.twig file for Hero
-- Copy PL markup to html.twig
+- Create [paragraph--button.html.twig](https://gist.github.com/chazchumley/3cac479c1040b29f904eb29060fecf27) file for Hero
+- Create [paragraph--hero.html.twig](https://gist.github.com/chazchumley/73fa8a5faa1a83f1fbea0dc1d4013aea) file for Hero
 - Clear cache
 - Review output to ensure it now matches PL Hero
 
 ## Converting Card to Drupal
-- Media Card view mode template
-- Review Current output
-- Create drupal template
-- Copy PL markup to drupal
-- Review new output
+- Review `/news` to review the current output of News content and the various display modes
+- Create [node--news--media-card.html.twig](https://gist.github.com/chazchumley/8113e803cab0ef073d435fd1a34345a5) file for News Media Card
+- Clear cache
+- Review output to ensure it now matches PL Card
 
-### Media Teaser view mode
-- Media Teaser view mode template
-- Review Current output
-- Create drupal template
-- Copy PL markup to drupal
-- Review new output
+## Converting Teaser Image to Drupal
+- Review `/news` to review the current output of News content and the various display modes
+- Create [node--news--media-teaser.html.twig](https://gist.github.com/chazchumley/036ed78c3be37fc122ebc3e905d7b7ef) file for News Media Teaser
+- Clear cache
+- Review output to ensure it now matches PL Card
 
-### Teaser view mode
-- Teaser view mode template
-- Review Current output
-- Create drupal template
-- Copy PL markup to drupal
-- Review new output
+## Converting Teaser to Drupal
+- Review `/news` to review the current output of News content and the various display modes
+- Create [node--news--teaser.html.twig](https://gist.github.com/chazchumley/84634de0f8adb307311c3fcb04eae895) file for News Teaser
+- Clear cache
+- Review output to ensure it now matches PL Card
 
 ## Creating News Section in Drupal
-- Paragraph type News Section (entity reference, news content type, limit 4)
-- Manage display will use News content types Card display
-- Add the News Section to the Homepage
-- Review
+- Using Paragraphs to create News Section
+-- Entity reference to News content type
+-- Limit to 4
+-- Manage display (Rendered Entity - Rendered as Media Card)
+- Add News Section to Homepage Landing page (Review output)
+- Create [paragraph--news-section.html.twig](https://gist.github.com/chazchumley/1305b6cd25eae5fe9850858d93a7bdd6)
+- Review output to ensure it now matches PL News Section
 
-## Creating News SubSection in Drupal
+## Creating News Subsection in Drupal
 - Explain how we use Views to display content not fields that allow for using display modes
-- Review Updates view and Upcoming view
-- Paragraph type News SubSection (view embed, limit 2)
--- Explain how we can use paragraphs to embed views
-- Add the News SubSection to the Homepage
-- Review
+- Review Updates view and Releases view
+- Using Paragraphs to create News Subsection
+-- Entity reference to View
+-- Limit to 2
+-- Manage display (Entity ID)
+- Add News Subsection to Homepage Landing page (Review output)
+- Create [paragraph--news-subsection.html.twig](https://gist.github.com/chazchumley/e803da8d069da5e562182a99b01dc339)
+- Review output to ensure it now matches PL News Subsection
