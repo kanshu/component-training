@@ -20,72 +20,14 @@ drupal server
 ```
 With `drupal server` you should now have a PHP webserver running on 127.0.0.1:8088 that you can now browse to within your favorite web browser.
 
-# Lesson Four: Component Libraries
-With the concept of creating components mastered, we will look at theming variations to create self-contained components that can be moved from project to project.  We will also explore using the Component library module to enable Twig namespacing, allow for more advanced Twig syntax and enable PatternLab to be our canonical source for markup.
+# Lesson Five: UI Patterns
+As designs evolve so will the patterns required to work smarter with Drupal.  We will take a look at some of the more advanced components and how to tackle them.  Also we will take a peek at the new UI Pattern Library module and how it integrates with Field Formatters and Display suite.
 
-## Creating Self-contained Components
-We will begin with working thru each component and moving the Sass files that correspond to each component into the Pattern Lab folder.  This approach will allow for component reuse from project to project if needed.
+## Advanced Patterns
 
-### Button
-Move `_button.scss` from `/sass/partials/components` to `/pattern-lab/source/_patterns/01-components/button`
-### Card
-Move `_card.scss` from `/sass/partials/components` to `/pattern-lab/source/_patterns/01-components/card`
-### Footer Menu
-Move `_nav--footer-menu.scss` from `/sass/partials/components/nav` to `/pattern-lab/source/_patterns/01-components/footer-menu` and rename to _footer-menu.scss
-### Hero
-Move `_hero-bg-image.scss` from `/sass/partials/components` to `/pattern-lab/source/_patterns/01-components/hero`
-### Main Menu
-Move `_nav--main.scss` from `/sass/partials/components/nav` to `/pattern-lab/source/_patterns/01-components/main-menu` and rename to _main-menu.scss
-### Site Name
-Move `_site-name.scss` from `/sass/partials/components` to `/pattern-lab/source/_patterns/01-components/site-name`
-### Teaser
-Move `_teaser.scss` from `/sass/partials/components` to `/pattern-lab/source/_patterns/01-components/teaser`
 
-## Working with Component Libraries module
-Registers “component libraries” defined by your theme or module as Twig namespaces.
+## Working with UI Patterns module
+Define and expose self-contained UI patterns as Drupal plugins and use them seamlessly as drop-in templates for panels, field groups, views, Display Suite field templates, paragraphs, nodes or any other entity types.
+
 ### Enable module
-Locate the Component Libraries module located at `/admin/modules` and enable it.
-### Register Pattern Lab paths with Drupal
-Open up `gesso.info.yml` and replace the contents with the [gesso.info.yml gist](https://gist.github.com/chazchumley/c38923ca1a4d0b4662ed0f76f288d368) which will add the following to the bottom of our themes configuration.
-```
-component-libraries:
-  base:
-    paths:
-      - pattern-lab/source/_patterns/00-base
-  components:
-    paths:
-      - pattern-lab/source/_patterns/01-components
-  layouts:
-    paths:
-      - pattern-lab/source/_patterns/02-layouts
-  templates:
-    paths:
-      - pattern-lab/source/_patterns/03-templates
-  pages:
-    paths:
-      - pattern-lab/source/_patterns/04-pages
-```
-Make sure to clear Drupal's cache after modifying the info.yml file
-
-### Revisit Drupal templates
-Now that we have registered Pattern Lab's Twig we now have a namespace we can reference directly from within our Drupal Twig templates.  This will allow for Pattern Lab to be the canonical source of our theme's markup.  To get a better understanding of how this works we will modify the following components...
-
-#### Button
-- Open up `paragraph--button.html.twig` and replace the markup with the following [gist](https://gist.github.com/chazchumley/89de44dd1ee8f04e4ef018e8f36f8c14)
-- Clear Drupal's cache and verify that our markup has not changed and it now pointing to PL
-
-#### Hero
-- Open up `paragraph--hero.html.twig` and replace the markup with the following [gist](https://gist.github.com/chazchumley/33d33b8b353314b8a097c909318f32c4)
-- Clear Drupal's cache and verify that our markup has not changed and it now pointing to PL
-
-#### Media Card
-- Open up `node--news--media-card.html.twig` and replace the markup with the following [gist](https://gist.github.com/chazchumley/607d6fa6ffbc4145bc17f2dedbe629fa)
-- Clear Drupal's cache and verify that our markup has not changed and it now pointing to PL
-
-#### Media Teaser
-- Open up `node--news--media-teaser.html.twig` and replace the markup with the following [gist](https://gist.github.com/chazchumley/42cfba06520326305b56c2faf9f7dd87)
-- Clear Drupal's cache and verify that our markup has not changed and it now pointing to PL
-
-#### Teaser
-- Open up `node--news--teaser.html.twig` and replace the markup with the following [gist](https://gist.github.com/chazchumley/3011b7bffe987707a3f04d9c99077137)
-- Clear Drupal's cache and verify that our markup has not changed and it now pointing to PL
+Locate the UI Patterns module located at `/admin/modules` and enable it.
