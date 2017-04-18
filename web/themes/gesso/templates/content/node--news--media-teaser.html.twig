@@ -1,7 +1,9 @@
-<article class="teaser has-media" role="article">
-  <img class="teaser__media" src="{{ content.field_media|field_value }}" alt="{{ content.field_media.0['#item'].alt }}">
-  <div class="teaser__content">
-    <div class="teaser__date">{{ content.field_published|field_value }}</div>
-    <h2 class="teaser__title"><a href="{{ url }}">{{ content.title|field_value }}</a></h2>
-  </div>
-</article>
+{% include '@components/teaser-image/teaser--image.twig'
+  with {
+    "teaserImage": content.field_media|field_value,
+    "teaserImageAlt": content.field_media.0['#item'].alt,
+    "teaserDate": content.field_published|field_value,
+    "url": url,
+    "title": content.title|field_value
+  }
+%}

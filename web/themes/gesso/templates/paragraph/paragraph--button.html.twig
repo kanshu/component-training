@@ -1,1 +1,6 @@
-<a href="{{ content.field_button_link }}" class="button">{{ content.field_button_label }}</a>
+{% include '@components/button/button.twig'
+  with {
+    "buttonUrl": content.field_button_url|field_value,
+    "buttonLabel": content.field_button_label|field_value
+  }
+%}

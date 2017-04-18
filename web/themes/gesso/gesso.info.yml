@@ -46,5 +46,22 @@ regions:
   content: Content
   footer_top: 'Footer Top'
   footer_bottom: 'Footer Bottom'
-  disabled: 'Disabled'
+  disabled: Disabled
   page_bottom: 'Page bottom'
+
+component-libraries:
+  base:
+    paths:
+      - pattern-lab/source/_patterns/00-base
+  components:
+    paths:
+      - pattern-lab/source/_patterns/01-components
+  layouts:
+    paths:
+      - pattern-lab/source/_patterns/02-layouts
+  templates:
+    paths:
+      - pattern-lab/source/_patterns/03-templates
+  pages:
+    paths:
+      - pattern-lab/source/_patterns/04-pages
