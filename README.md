@@ -33,9 +33,9 @@ During this lesson we will be reviewing a design, identifying components and beg
 - Create component in PL
 - Using `*.yaml` to replace static content with variables
 - Review final component in PL [Converted markup to Twig](https://gist.github.com/chazchumley/3ddcf9d7374a29e179e5a50e39a5aeb4)
-- Create [hero-bg-image.yaml](https://gist.github.com/chazchumley/ba112f33855a10d686c194f571a79cc9)
+-- Create [hero-bg-image.yaml](https://gist.github.com/chazchumley/ba112f33855a10d686c194f571a79cc9)
 - Create dependent button component in PL [Convert markup to Twig](https://gist.github.com/chazchumley/146d18bee71ef10395dd6351ae3347d6)
-- Create [button.yaml](https://gist.github.com/chazchumley/968e0c2f326c176b988f74ceed3a6863)
+-- Create [button.yaml](https://gist.github.com/chazchumley/968e0c2f326c176b988f74ceed3a6863)
 
 ## Creating our second component (Media Card)
 - Step One Review [Media Card](https://codepen.io/cchumley/full/aWvvKR/)
@@ -49,12 +49,14 @@ During this lesson we will be reviewing a design, identifying components and beg
 - Create markup
 - Review final Completed example [Teaser](https://codepen.io/cchumley/pen/EmVVMG)
 - Create component in PL [Convert markup to Twig](https://gist.github.com/chazchumley/b5772a59d980fcca8e7e08dae3ad353c)
+- [Teaser Revised](https://gist.github.com/chazchumley/85e9e6c45e270f52e1a577273192389e) to handle multiple items
 
 ## Creating our second component (Media Teaser)
 - Step One Review [Media Teaser](https://codepen.io/cchumley/full/Gmppwp/)
 - Create markup
 - Review final Completed example [Media Teaser](https://codepen.io/cchumley/pen/Gmppwp)
 - Create component in PL [Convert markup to Twig](https://gist.github.com/chazchumley/28114f7f9f26c22cf282a42305bb84c9)
+- [Media Teaser Revised](https://gist.github.com/chazchumley/1c9dffb0a75187dfb2e47b401c55bbb2) to handle multiple items
 
 ## Creating Page Template (Homepage)
 - Step One Review [Homepage](https://codepen.io/cchumley/full/PmPPMb/)
