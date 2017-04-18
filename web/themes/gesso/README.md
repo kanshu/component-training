@@ -20,108 +20,36 @@ drupal server
 ```
 With `drupal server` you should now have a PHP webserver running on 127.0.0.1:8088 that you can now browse to within your favorite web browser.
 
-# Lesson Three: Building Components
-During this lesson we will be reviewing a design, identifying components and begin building our first components using Pattern Lab.  We will learn how to create simple components, combine components and then migrate components to Drupal 8 using Twig.  Various modules will come in handy such as Paragraphs, Twig Tweak and Twig field value.
+# Lesson Five: UI Patterns
+As designs evolve so will the patterns required to work smarter with Drupal.  We will take a look at some of the more advanced components and how to tackle them.  Also we will take a peek at the new UI Pattern Library module and how it integrates with Field Formatters and Display suite.
 
-## Reviewing the Homepage Design
-[Homepage](https://codepen.io/cchumley/full/PmPPMb/)
+## Working with UI Patterns module
+Define and expose self-contained UI patterns as Drupal plugins and use them seamlessly as drop-in templates for panels, field groups, views, Display Suite field templates, paragraphs, nodes or any other entity types.
 
-## Creating our first component (Hero)
-- Step One Review [Hero](https://codepen.io/cchumley/full/eWppEy)
-- Create markup
-- Review final Completed example [Hero](https://codepen.io/cchumley/pen/eWppEy)
-- Create component in PL
-- Using `*.yaml` to replace static content with variables
-- Review final component in PL [Converted markup to Twig](https://gist.github.com/chazchumley/3ddcf9d7374a29e179e5a50e39a5aeb4)
--- Create [hero-bg-image.yaml](https://gist.github.com/chazchumley/ba112f33855a10d686c194f571a79cc9)
-- Create dependent button component in PL [Convert markup to Twig](https://gist.github.com/chazchumley/146d18bee71ef10395dd6351ae3347d6)
--- Create [button.yaml](https://gist.github.com/chazchumley/968e0c2f326c176b988f74ceed3a6863)
+### Enable module
+Locate the UI Patterns module located at `/admin/modules` and enable UI Patterns, UI Patterns Display Suite, UI Patterns Layout and UI Patterns Library.  Confirm and accept additional module dependencies such as Display Suite and Layout Discovery
 
-## Creating our second component (Media Card)
-- Step One Review [Media Card](https://codepen.io/cchumley/full/aWvvKR/)
-- Create markup
-- Review final Completed example [Media Card](https://codepen.io/cchumley/pen/aWvvKR)
-- Create component in PL [Convert markup to Twig](https://gist.github.com/chazchumley/92c201754b1c95f0f06d97b2b96f5d1e)
-- [Media Card Revised](https://gist.github.com/chazchumley/6fde14bbf5b5cd159ac76cfc1805ee99) to handle multiple items
+#### Create Image Caption pattern
+- Create Patterns folder located at `/web/themes/gesso/templates/patterns`
+- Create new pattern called `pattern-image-caption.html.twig` and add the content of the following [gist](https://gist.github.com/chazchumley/29c343837081cbc8a63dfb922231cc89)
+- Create `gesso.ui_patterns.yml` and add the content of the following [gist](https://gist.github.com/chazchumley/39ee501d8863a1f916da42949118a601)
+- Preview Image Caption pattern at `/patterns`
+- Image Caption Pattern is now exposed to Drupal and can be used to map fields to using Display Suite
 
-## Creating our second component (Teaser)
-- Step One Review [Teaser](https://codepen.io/cchumley/full/EmVVMG/)
-- Create markup
-- Review final Completed example [Teaser](https://codepen.io/cchumley/pen/EmVVMG)
-- Create component in PL [Convert markup to Twig](https://gist.github.com/chazchumley/b5772a59d980fcca8e7e08dae3ad353c)
-- [Teaser Revised](https://gist.github.com/chazchumley/85e9e6c45e270f52e1a577273192389e) to handle multiple items
+#### Create Image Caption Paragraph
+- Image (Image)
+- Caption (Text, plain)
+- Manage display (Choose Image Pattern from Layout - Select a layout)
+- Add Image Caption to /components page
+- Preview results
 
-## Creating our second component (Media Teaser)
-- Step One Review [Media Teaser](https://codepen.io/cchumley/full/Gmppwp/)
-- Create markup
-- Review final Completed example [Media Teaser](https://codepen.io/cchumley/pen/Gmppwp)
-- Create component in PL [Convert markup to Twig](https://gist.github.com/chazchumley/28114f7f9f26c22cf282a42305bb84c9)
-- [Media Teaser Revised](https://gist.github.com/chazchumley/1c9dffb0a75187dfb2e47b401c55bbb2) to handle multiple items
+## Advanced UI Patterns
+Now lets take a look at the best of both worls by combining Pattern Lab with the Component Libraries modules and the UI Patterns module to have our new pattern use markup from PL
 
-## Creating Page Template (Homepage)
-- Step One Review [Homepage](https://codepen.io/cchumley/full/PmPPMb/)
-- Review [homepage.twig](https://gist.github.com/chazchumley/d7abbaf8b80d2c4f35879b1084fa44d8)
-- Working with `@includes` and `@includes with` variables
-- Repeating content with loops and `listitems.yaml`
-- Review completed [homepage.twig](https://gist.github.com/chazchumley/b5162cd77b831f1edb168da9f476f211) in PL
-
-# Converting Hero Component from PL to Drupal
-- Identify how the Hero component would translate to Drupal using Paragraphs
-- Working with Paragraphs to Create Hero and Button paragraph types
--- Nesting paragraph types for reuse and flexibility
-### Button Paragraph
-- Button Label (text, plain)
-- Button URL (Link)
-- Manage display (Hide labels, Link - Show URL only as plain-text)
-### Hero Paragraph
-- Background Image (Image)
-- Hero Title (Text, plain)
-- Hero Text (Text, formatted, long)
-- Hero Button (Entity reference revisions - button)
-- Manage display (Hide labels, Image URL, Hero Image style)
-### Add Hero to Homepage
-- Add Hero paragraph to Homepage in Drupal
-- Review output
-- Create [paragraph--button.html.twig](https://gist.github.com/chazchumley/3cac479c1040b29f904eb29060fecf27) file for Hero
-- Create [paragraph--hero.html.twig](https://gist.github.com/chazchumley/73fa8a5faa1a83f1fbea0dc1d4013aea) file for Hero
-- Clear cache
-- Review output to ensure it now matches PL Hero
-
-## Converting Card to Drupal
-- Review `/news` to review the current output of News content and the various display modes
-- Create [node--news--media-card.html.twig](https://gist.github.com/chazchumley/8113e803cab0ef073d435fd1a34345a5) file for News Media Card
-- Clear cache
-- Review output to ensure it now matches PL Card
-
-## Converting Teaser Image to Drupal
-- Review `/news` to review the current output of News content and the various display modes
-- Create [node--news--media-teaser.html.twig](https://gist.github.com/chazchumley/036ed78c3be37fc122ebc3e905d7b7ef) file for News Media Teaser
-- Clear cache
-- Review output to ensure it now matches PL Card
-
-## Converting Teaser to Drupal
-- Review `/news` to review the current output of News content and the various display modes
-- Create [node--news--teaser.html.twig](https://gist.github.com/chazchumley/84634de0f8adb307311c3fcb04eae895) file for News Teaser
-- Clear cache
-- Review output to ensure it now matches PL Card
-
-## Creating News Section in Drupal
-- Using Paragraphs to create News Section
-- News (Entity reference to News content type)
-- Limit to 4 / Sort by Title
-- Manage display (Hide Labels, Rendered Entity - Rendered as Media Card)
-- Add News Section to Homepage Landing page (Review output)
-- Create [paragraph--news-section.html.twig](https://gist.github.com/chazchumley/1305b6cd25eae5fe9850858d93a7bdd6)
-- Review output to ensure it now matches PL News Section
-
-## Creating News Subsection in Drupal
-- Explain how we use Views to display content not fields that allow for using display modes
-- Review Updates view and Releases view
-- Using Paragraphs to create News Subsection
-- View One (Entity reference - Other - View)
-- View Two (Entity reference - Other - View)
-- Manage form display (select list)
-- Manage display (Entity ID)
-- Add News Subsection to Homepage Landing page (Review output)
-- Create [paragraph--news-subsection.html.twig](https://gist.github.com/chazchumley/e803da8d069da5e562182a99b01dc339)
-- Review output to ensure it now matches PL News Subsection
+### Create Image Caption Component in PL
+- Create new `image-caption` folder within `/pattern-lab/source/_patterns/01-components`
+- Create `image-caption.scss` file and copy content of [gist](https://gist.github.com/chazchumley/75a80d84308408460621908b30a02cf0)
+- Create `image-caption.twig` file and copy content of [gist](https://gist.github.com/chazchumley/44a8a25f0b8719325bcda68f03b77bb6)
+- Create `image-caption.yaml` for data variables and copy content of [gist](https://gist.github.com/chazchumley/9724a8c48c73e7dbd6e2e736cc8bc06f)
+- Modify `gesso.ui_patterns.yml` to add use: statement to point to Pattern Lab component - [gist](https://gist.github.com/chazchumley/642434aa7583a14d38b2a554094d412f)
+- Review `/components` page to make sure image caption is rendering
