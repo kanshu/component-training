@@ -33,9 +33,9 @@ During this lesson we will be reviewing a design, identifying components and beg
 - Create component in PL
 - Using `*.yaml` to replace static content with variables
 - Review final component in PL [Converted markup to Twig](https://gist.github.com/chazchumley/3ddcf9d7374a29e179e5a50e39a5aeb4)
--- Create [hero-bg-image.yaml](https://gist.github.com/chazchumley/ba112f33855a10d686c194f571a79cc9)
+- Create [hero-bg-image.yaml](https://gist.github.com/chazchumley/ba112f33855a10d686c194f571a79cc9)
 - Create dependent button component in PL [Convert markup to Twig](https://gist.github.com/chazchumley/146d18bee71ef10395dd6351ae3347d6)
--- Create [button.yaml](https://gist.github.com/chazchumley/968e0c2f326c176b988f74ceed3a6863)
+- Create [button.yaml](https://gist.github.com/chazchumley/968e0c2f326c176b988f74ceed3a6863)
 
 ## Creating our second component (Media Card)
 - Step One Review [Media Card](https://codepen.io/cchumley/full/aWvvKR/)
