@@ -30,7 +30,9 @@ During this lesson we will be reviewing a design, identifying components and beg
 - Step One Review [Hero](https://codepen.io/cchumley/full/eWppEy)
 - Create markup
 - Review final Completed example [Hero](https://codepen.io/cchumley/pen/eWppEy)
-- Create component in PL [Convert markup to Twig](https://gist.github.com/chazchumley/3ddcf9d7374a29e179e5a50e39a5aeb4)
+- Create component in PL
+- Using `*.yaml` to replace static content with variables
+- Review final component in PL [Converted markup to Twig](https://gist.github.com/chazchumley/3ddcf9d7374a29e179e5a50e39a5aeb4)
 - Create dependent button component in PL [Convert markup to Twig](https://gist.github.com/chazchumley/146d18bee71ef10395dd6351ae3347d6)
 
 ## Creating our second component (Media Card)
