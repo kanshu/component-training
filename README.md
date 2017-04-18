@@ -43,13 +43,50 @@ Move `_teaser.scss` from `/sass/partials/components` to `/pattern-lab/source/_pa
 
 ## Working with Component Libraries module
 Registers “component libraries” defined by your theme or module as Twig namespaces.
-
 ### Enable module
-
+Locate the Component Libraries module located at `/admin/modules` and enable it.
 ### Register Pattern Lab paths with Drupal
+Open up `gesso.info.yml` and replace the contents with the [gesso.info.yml gist](https://gist.github.com/chazchumley/c38923ca1a4d0b4662ed0f76f288d368) which will add the following to the bottom of our themes configuration.
+```
+component-libraries:
+  base:
+    paths:
+      - pattern-lab/source/_patterns/00-base
+  components:
+    paths:
+      - pattern-lab/source/_patterns/01-components
+  layouts:
+    paths:
+      - pattern-lab/source/_patterns/02-layouts
+  templates:
+    paths:
+      - pattern-lab/source/_patterns/03-templates
+  pages:
+    paths:
+      - pattern-lab/source/_patterns/04-pages
+```
+Make sure to clear Drupal's cache after modifying the info.yml file
 
 ### Revisit Drupal templates
+Now that we have registered Pattern Lab's Twig we now have a namespace we can reference directly from within our Drupal Twig templates.  This will allow for Pattern Lab to be the canonical source of our theme's markup.  To get a better understanding of how this works we will modify the following components...
 
 #### Button
+- Open up `paragraph--button.html.twig` and replace the markup with the following [gist](https://gist.github.com/chazchumley/89de44dd1ee8f04e4ef018e8f36f8c14)
+- Clear Drupal's cache and verify that our markup has not changed and it now pointing to PL
 
 #### Hero
+- Open up `paragraph--hero.html.twig` and replace the markup with the following [gist](https://gist.github.com/chazchumley/33d33b8b353314b8a097c909318f32c4)
+- Clear Drupal's cache and verify that our markup has not changed and it now pointing to PL
+
+#### Media Card
+- Open up `node--news--media-card.html.twig` and replace the markup with the following [gist](https://gist.github.com/chazchumley/607d6fa6ffbc4145bc17f2dedbe629fa)
+- Clear Drupal's cache and verify that our markup has not changed and it now pointing to PL
+
+#### Media Teaser
+- Open up `node--news--media-teaser.html.twig` and replace the markup with the following [gist](https://gist.github.com/chazchumley/42cfba06520326305b56c2faf9f7dd87)
+- Clear Drupal's cache and verify that our markup has not changed and it now pointing to PL
+
+#### Teaser
+- Open up `node--news--teaser.html.twig` and replace the markup with the following [gist](https://gist.github.com/chazchumley/3011b7bffe987707a3f04d9c99077137)
+- Clear Drupal's cache and verify that our markup has not changed and it now pointing to PL
+
