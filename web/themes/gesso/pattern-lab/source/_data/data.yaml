@@ -18,3 +18,8 @@ img:
     alt: "Landscape 16:9"
     height: "450"
     width: "800"
+teaserImage: "http://fpoimg.com/140x105?text=Thumbnail 4:3"
+teaserImageAlt: "Thumbnail 4:3"
+teaserDate: "January 1, 2016"
+title: "You can't take the sky from me"
+teaser: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."

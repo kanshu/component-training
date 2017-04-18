@@ -3,14 +3,28 @@
 <main id="main" class="main" role="main" tabindex="-1">
   <div class="region-content">
 
-    {# Hero #}
+    {% include "@components/hero-bg-image/hero-bg-image.twig"
+      with {
+        "hasButton": true,
+        "image": "../../../../images/hero-whale.jpg",
+        "title": "Safe Waters, Safe Whales",
+        "summary": "The Pacific Whale Conservancy helps protect the habitats of whales through education, activism, and outreach so that whales can be free, the way nature intended."
+        }
+     %}
 
     <section class="section-landing">
       <div class="l-constrain">
         <div class="section-landing__inner">
-
-          {# Featured - Cards #}
-
+          <div class="view">
+            <div class="view__header">
+              <h2 class="section-landing__title">Featured</h2>
+            </div>
+            <div class="view__content l-grid l-grid--cards">
+              {% for listItem in listItems.four %}
+                {% include "@components/card/card.twig" %}
+              {% endfor %}
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -19,15 +33,29 @@
       <div class="l-constrain">
         <div class="section-landing__inner l-grid l-grid--50">
           <div class="section-landing__section">
-
-            {# Updates - Teaser #}
-
+            <div class="view">
+              <div class="view__header">
+                <h2 class="section-landing__title">Updates</h2>
+              </div>
+              <div class="view__content">
+                {% for listItem in listItems.four %}
+                  {% include "@components/teaser/teaser.twig" %}
+                {% endfor %}
+              </div>
+            </div>
           </div>
 
           <div class="section-landing__section">
-
-            {# News Releases - Teaser w/ Media #}
-
+            <div class="view">
+              <div class="view__header">
+                <h2 class="section-landing__title">News Releases</h2>
+              </div>
+              <div class="view__content">
+                {% for listItem in listItems.four %}
+                  {% include "@components/teaser-image/teaser--image.twig" %}
+                {% endfor %}
+              </div>
+            </div>
           </div>
 
         </div>

@@ -1,0 +1,4 @@
+<article class="teaser" role="article">
+  <div class="teaser__date">{% if listItem %}{{ listItem.teaserDate }}{% else %}{{ teaserDate }}{% endif %}</div>
+  <h2 class="teaser__title"><a href="{{ url }}">{% if listItem %}{{ listItem.title }}{% else %}{{ title }}{% endif %}</a></h2>
+</article>

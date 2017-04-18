@@ -1,0 +1,14 @@
+{% set teaser = content.field_teaser.0['#context'].value %}
+
+<div class="card">
+  <div class="card__rich-media">
+    <a href="{{ url }}"><img src="{{ content.field_media|field_value }}" alt="{{ content.field_media.0['#item'].alt }}"></a>
+  </div>
+  <div class="card__header">
+    <div class="card__date">{{ content.field_published|field_value }}</div>
+    <h3 class="card__title"><a href="{{ url }}">{{ content.title|field_value }}</a></h3>
+  </div>
+  <div class="card__body-content">
+    {{ teaser|length > 150 ? teaser|slice(0, 150) ~ '...' : teaser }}
+  </div>
+</div>

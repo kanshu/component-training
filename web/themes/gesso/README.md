@@ -30,26 +30,33 @@ During this lesson we will be reviewing a design, identifying components and beg
 - Step One Review [Hero](https://codepen.io/cchumley/full/eWppEy)
 - Create markup
 - Review final Completed example [Hero](https://codepen.io/cchumley/pen/eWppEy)
-- Create component in PL [Convert markup to Twig](https://gist.github.com/chazchumley/3ddcf9d7374a29e179e5a50e39a5aeb4)
+- Create component in PL
+- Using `*.yaml` to replace static content with variables
+- Review final component in PL [Converted markup to Twig](https://gist.github.com/chazchumley/3ddcf9d7374a29e179e5a50e39a5aeb4)
+-- Create [hero-bg-image.yaml](https://gist.github.com/chazchumley/ba112f33855a10d686c194f571a79cc9)
 - Create dependent button component in PL [Convert markup to Twig](https://gist.github.com/chazchumley/146d18bee71ef10395dd6351ae3347d6)
+-- Create [button.yaml](https://gist.github.com/chazchumley/968e0c2f326c176b988f74ceed3a6863)
 
 ## Creating our second component (Media Card)
 - Step One Review [Media Card](https://codepen.io/cchumley/full/aWvvKR/)
 - Create markup
 - Review final Completed example [Media Card](https://codepen.io/cchumley/pen/aWvvKR)
 - Create component in PL [Convert markup to Twig](https://gist.github.com/chazchumley/92c201754b1c95f0f06d97b2b96f5d1e)
+- [Media Card Revised](https://gist.github.com/chazchumley/6fde14bbf5b5cd159ac76cfc1805ee99) to handle multiple items
 
 ## Creating our second component (Teaser)
 - Step One Review [Teaser](https://codepen.io/cchumley/full/EmVVMG/)
 - Create markup
 - Review final Completed example [Teaser](https://codepen.io/cchumley/pen/EmVVMG)
 - Create component in PL [Convert markup to Twig](https://gist.github.com/chazchumley/b5772a59d980fcca8e7e08dae3ad353c)
+- [Teaser Revised](https://gist.github.com/chazchumley/85e9e6c45e270f52e1a577273192389e) to handle multiple items
 
 ## Creating our second component (Media Teaser)
 - Step One Review [Media Teaser](https://codepen.io/cchumley/full/Gmppwp/)
 - Create markup
 - Review final Completed example [Media Teaser](https://codepen.io/cchumley/pen/Gmppwp)
 - Create component in PL [Convert markup to Twig](https://gist.github.com/chazchumley/28114f7f9f26c22cf282a42305bb84c9)
+- [Media Teaser Revised](https://gist.github.com/chazchumley/1c9dffb0a75187dfb2e47b401c55bbb2) to handle multiple items
 
 ## Creating Page Template (Homepage)
 - Step One Review [Homepage](https://codepen.io/cchumley/full/PmPPMb/)
@@ -58,10 +65,21 @@ During this lesson we will be reviewing a design, identifying components and beg
 - Repeating content with loops and `listitems.yaml`
 - Review completed [homepage.twig](https://gist.github.com/chazchumley/b5162cd77b831f1edb168da9f476f211) in PL
 
-# Converting Hero Components into Drupal
+# Converting Hero Component from PL to Drupal
 - Identify how the Hero component would translate to Drupal using Paragraphs
 - Working with Paragraphs to Create Hero and Button paragraph types
 -- Nesting paragraph types for reuse and flexibility
+### Button Paragraph
+- Button Label (text, plain)
+- Button URL (Link)
+- Manage display (Hide labels, Link - Show URL only as plain-text)
+### Hero Paragraph
+- Background Image (Image)
+- Hero Title (Text, plain)
+- Hero Text (Text, formatted, long)
+- Hero Button (Entity reference revisions - button)
+- Manage display (Hide labels, Image URL, Hero Image style)
+### Add Hero to Homepage
 - Add Hero paragraph to Homepage in Drupal
 - Review output
 - Create [paragraph--button.html.twig](https://gist.github.com/chazchumley/3cac479c1040b29f904eb29060fecf27) file for Hero
@@ -89,9 +107,9 @@ During this lesson we will be reviewing a design, identifying components and beg
 
 ## Creating News Section in Drupal
 - Using Paragraphs to create News Section
--- Entity reference to News content type
--- Limit to 4
--- Manage display (Rendered Entity - Rendered as Media Card)
+- News (Entity reference to News content type)
+- Limit to 4 / Sort by Title
+- Manage display (Hide Labels, Rendered Entity - Rendered as Media Card)
 - Add News Section to Homepage Landing page (Review output)
 - Create [paragraph--news-section.html.twig](https://gist.github.com/chazchumley/1305b6cd25eae5fe9850858d93a7bdd6)
 - Review output to ensure it now matches PL News Section
@@ -100,9 +118,10 @@ During this lesson we will be reviewing a design, identifying components and beg
 - Explain how we use Views to display content not fields that allow for using display modes
 - Review Updates view and Releases view
 - Using Paragraphs to create News Subsection
--- Entity reference to View
--- Limit to 2
--- Manage display (Entity ID)
+- View One (Entity reference - Other - View)
+- View Two (Entity reference - Other - View)
+- Manage form display (select list)
+- Manage display (Entity ID)
 - Add News Subsection to Homepage Landing page (Review output)
 - Create [paragraph--news-subsection.html.twig](https://gist.github.com/chazchumley/e803da8d069da5e562182a99b01dc339)
 - Review output to ensure it now matches PL News Subsection

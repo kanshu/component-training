@@ -1,0 +1,9 @@
+<div class="hero-bg-image" style="background-image: url({{ content.field_background_image|render|trim }});">
+  <div class="l-constrain">
+    <div class="hero-bg-image__content">
+      <h1 class="hero-bg-image__title">{{ content.field_hero_title|field_value }}</h1>
+      <div class="hero-bg-image__text">{{ content.field_hero_text|field_value }}</div>
+      <div class="hero-bg-image__call-to-action">{{ content.field_hero_button|field_value }}</div>
+    </div>
+  </div>
+</div>

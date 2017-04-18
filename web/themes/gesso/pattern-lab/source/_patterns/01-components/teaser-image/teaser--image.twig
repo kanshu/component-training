@@ -1,0 +1,7 @@
+<article class="teaser has-media" role="article">
+  <img class="teaser__media" src="{% if listItem %}{{ listItem.img.thumbnail.src }}{% else %}{{ teaserImage }}{% endif %}" alt="{% if listItem %}{{ listItem.img.thumbnail.alt }}{% else %}{{ teaserImageAlt }}{% endif %}">
+  <div class="teaser__content">
+    <div class="teaser__date">{% if listItem %}{{ listItem.teaserDate }}{% else %}{{ teaserDate }}{% endif %}</div>
+    <h2 class="teaser__title"><a href="{{ url }}">{% if listItem %}{{ listItem.title }}{% else %}{{ title }}{% endif %}</a></h2>
+  </div>
+</article>

@@ -1,0 +1,7 @@
+{% if button %}
+  {% for b in button %}
+    <a href="{{ b.buttonUrl }}" class="button button">{{ b.buttonLabel }}</a>
+  {% endfor %}
+{% else %}
+  <a href="{{ buttonUrl }}" class="button button">{{ buttonLabel }}</a>
+{% endif %}
