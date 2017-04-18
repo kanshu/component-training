@@ -4,7 +4,7 @@ This repository is for using a Composer based workflow with Drupal 8.  We will b
 ## Assumptions
 There are some basic assumptions that you have a built-in PHP server and have globally installed Composer, Drush and Drupal Console.
 - OSX and Linux users can walkthru the [Development Workflow](https://github.com/chazchumley/component-training/blob/master/docs/developer-workflow.pdf) document to assist with globaly installing Composer, Drush and Drupal Console.
-- Window users should use [DrupalVM](https://www.drupalvm.com/) to setup a virtual environment that contains PHP, Composer, Drush and Drupal Console
+- Window users should use [DrupalVM](https://www.drupalvm.com/) to setup a virtual environment that contains PHP, Composer, Drush and Drupal Console.  Make sure to enable `nodejs` in the `config.yml` file to allow for installing and using NPM and Grunt
 
 ## Usage
 Once the assumptions above have been completed you can easily create the Drupal 8 project by opening a terminal window, changing into the project root directory and running the following commands:
