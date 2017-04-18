@@ -65,10 +65,21 @@ During this lesson we will be reviewing a design, identifying components and beg
 - Repeating content with loops and `listitems.yaml`
 - Review completed [homepage.twig](https://gist.github.com/chazchumley/b5162cd77b831f1edb168da9f476f211) in PL
 
-# Converting Hero Components into Drupal
+# Converting Hero Component from PL to Drupal
 - Identify how the Hero component would translate to Drupal using Paragraphs
 - Working with Paragraphs to Create Hero and Button paragraph types
 -- Nesting paragraph types for reuse and flexibility
+### Button Paragraph
+- Button Label (text, plain)
+- Button URL (Link)
+- Manage display (Hide labels, Link - Show URL only as plain-text)
+### Hero Paragraph
+- Background Image (Image)
+- Hero Title (Text, plain)
+- Hero Text (Text, formatted, long)
+- Hero Button (Entity reference revisions - button)
+- Manage display (Hide labels, Image URL, Hero Image style)
+### Add Hero to Homepage
 - Add Hero paragraph to Homepage in Drupal
 - Review output
 - Create [paragraph--button.html.twig](https://gist.github.com/chazchumley/3cac479c1040b29f904eb29060fecf27) file for Hero
@@ -96,9 +107,9 @@ During this lesson we will be reviewing a design, identifying components and beg
 
 ## Creating News Section in Drupal
 - Using Paragraphs to create News Section
--- Entity reference to News content type
--- Limit to 4
--- Manage display (Rendered Entity - Rendered as Media Card)
+- News (Entity reference to News content type)
+- Limit to 4 / Sort by Title
+- Manage display (Hide Labels, Rendered Entity - Rendered as Media Card)
 - Add News Section to Homepage Landing page (Review output)
 - Create [paragraph--news-section.html.twig](https://gist.github.com/chazchumley/1305b6cd25eae5fe9850858d93a7bdd6)
 - Review output to ensure it now matches PL News Section
@@ -107,9 +118,10 @@ During this lesson we will be reviewing a design, identifying components and beg
 - Explain how we use Views to display content not fields that allow for using display modes
 - Review Updates view and Releases view
 - Using Paragraphs to create News Subsection
--- Entity reference to View
--- Limit to 2
--- Manage display (Entity ID)
+- View One (Entity reference - Other - View)
+- View Two (Entity reference - Other - View)
+- Manage form display (select list)
+- Manage display (Entity ID)
 - Add News Subsection to Homepage Landing page (Review output)
 - Create [paragraph--news-subsection.html.twig](https://gist.github.com/chazchumley/e803da8d069da5e562182a99b01dc339)
 - Review output to ensure it now matches PL News Subsection
