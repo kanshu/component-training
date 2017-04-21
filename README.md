@@ -1,24 +1,48 @@
-# Composer-based Theming with Twig
+# Component-based Theming with Twig
 This repository is for using a Composer based workflow with Drupal 8.  We will be using this repository and the branches to maintain various snapshots as we progress thru each lesson.
 
-## Assumptions
-There are some basic assumptions that you have a built-in PHP server and have globally installed Composer, Drush and Drupal Console.
-- OSX and Linux users can walkthru the [Development Workflow](https://github.com/chazchumley/component-training/blob/master/docs/developer-workflow.pdf) document to assist with globaly installing Composer, Drush and Drupal Console.
-- Window users should use [DrupalVM](https://www.drupalvm.com/) to setup a virtual environment that contains PHP, Composer, Drush and Drupal Console.  Make sure to enable `nodejs` in the `config.yml` file to allow for installing and using NPM and Grunt
+## Requirements
+All users will need a development environment. This can be achieved either by installing the necessary development tools locally or by downloading a virtual machine that has all of the tools pre-installed and a clone of this repo already setup. Windows users (or those that do not wish to install tools locally) should follow the instructions for `Option 2: Preconfigured Virtual Machine`.
 
-## Usage
-Once the assumptions above have been completed you can easily create the Drupal 8 project by opening a terminal window, changing into the project root directory and running the following commands:
+# Option 1: Setup a Local Development Environment (OSX or Linux)
+1) You will need to have a built-in PHP server with Sqlite readily available to use.  This can be accomplished using a package manager such as [Homebrew](https://brew.sh/) to manually install and configure PHP 5.6 or higher or use a LAMP stack such as [Mamp Pro](https://www.mamp.info/en/mamp-pro/).  
 
+    * Make sure that your `.bashrc` or `.zshrc` file contains the path to the PHP version you are using.
+    * If you type `which php` in your terminal window it should point to the path configured above.
+2) You will also need to ensure you have globally installed `Composer`, `Drush` and/or `Drupal Console` as these tools will be used to install Drupal and run various commands such as enabling PHP's built-in server and clearing Drupal's cache.
+    * OSX and Linux users can refer to the [Development Workflow](https://github.com/chazchumley/component-training/blob/master/docs/developer-workflow.pdf) document to assist you with globaly installing Composer, Drush and Drupal Console.
+
+3) Finally as we will be working with Pattern Lab, Sass and Twig we will need to ensure we can use `npm` and `grunt` which requires that both [nodejs](https://nodejs.org/en/) and [grunt-cli](https://gruntjs.com/getting-started) are installed.
+
+Once your environment is configured you can easily create a Drupal 8 project by opening a terminal window, changing into the project root directory and running the following commands:
 ```
 composer install
 composer drupal-scaffold
 ```
 The `composer install` command reads the `composer.json` file to install Drupal 8 and any dependencies it needs.  Any contributed modules will also be installed and the Drupal directory structure will be scaffolded.
 
+To test PHP's built-in webserver can be run, enter the following command in the terminal window.
+
+```
+cd web
+drush rs
+```
+
+To start PHP's built-in webserver using Drupal Console, run the following command.
+
 ```
 drupal server
 ```
-With `drupal server` you should now have a PHP webserver running on 127.0.0.1:8088 that you can now browse to within your favorite web browser.
+
+# Option 2: Preconfigured Virtual Environment (Windows, OSX or Linux)
+1) Download and install [Virtualbox](https://www.virtualbox.org/wiki/Downloads) 
+2) Download and install [Virtualbox Extension Pack](https://www.virtualbox.org/wiki/Downloads)
+3) Download [Component Training VM](https://drive.google.com/drive/folders/0B_zw0jyZ5Ij8ZUFLVS1RSFgwR00) (2.6GB) which contains a pre-built Ubuntu environment configured with PHP7, Sqlite, Composer, Drush, NodeJS and Grunt.
+4) Open Virtual Box and select File -> Import Appliance and choose the VM that was just downloaded
+5) Select the `component-training` VM inside VirtualBox and click `start`
+6) To close the VM, select File -> Close from the VirtualBox interface and select `save the machine state`
+
+> Note: if prompted by Ubuntu or Chrome, the pasword is `component`
 
 # Lesson Four: Component Libraries
 With the concept of creating components mastered, we will look at theming variations to create self-contained components that can be moved from project to project.  We will also explore using the Component library module to enable Twig namespacing, allow for more advanced Twig syntax and enable PatternLab to be our canonical source for markup.
