@@ -1,6 +1,8 @@
 # Component-based Theming with Twig
 This repository is for using a Composer based workflow with Drupal 8.  We will be using this repository and the branches to maintain various snapshots as we progress thru each lesson.
 
+[Slide Deck](https://docs.google.com/presentation/d/1ocoGFkgNkNu1z0Yz8PAsjD0fOyDvmpEszV3P-OlphZo/edit?usp=sharing)
+
 ## Requirements
 All users will need a development environment. This can be achieved either by installing the necessary development tools locally or by downloading a virtual machine that has all of the tools pre-installed and a clone of this repo already setup. Windows users (or those that do not wish to install tools locally) should follow the instructions for `Option 2: Preconfigured Virtual Machine`.
 
